@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Title</title>
+	</head>
+	<body>
+	
+
+		<input id="inNoot" />
+		<button onclick="noot()" >Noot</button>
+		
+		<p id="outNoot"></p>
+	
+		<script>
+			
+			noot = function(){
+			
+				var strVal = document.getElementById("inNoot").value;
+				var strVals = strVal.split(" ");
+		
+				var nootVal = "";
+				for(var i = 0; i<strVals.length; i++){
+				
+					var v = strVals[i].toLowerCase();
+					
+					if(v == ""){
+						//skip
+					}
+					else if(v.endsWith('ing')){
+						nootVal += "nooting ";
+					}
+					else if(v.endsWith('ly')){
+						nootVal += "nootly ";
+					}
+					else if(v.endsWith('ed')){
+						nootVal += "nooted ";
+					}
+					else if(v == 'noot'){
+						nootVal += "noot&sup2 ";	
+					} 
+					else {
+						nootVal += "noot ";
+					}
+				
+
+				}
+				
+				
+				document.getElementById("outNoot").innerHTML = nootVal;
+			}
+			
+		</script>
+	
+	</body>
+</html>
