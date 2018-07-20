@@ -6,12 +6,28 @@
 	display: inline-block;
 }
 
+#out-noot-container {
+	margin-top: 15px;
+}
+
+#out-noot-container textarea {
+	background-color: white;
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
 
   display: flex;
   align-items: center;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
 }
 
 /****************************
